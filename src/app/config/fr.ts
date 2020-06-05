@@ -32,39 +32,56 @@ const aboutForm: About = {
 
 const aboutContent: About = {
   name: 'Amine Kamal',
-  expertise: 'Software Developer',
+  expertise: 'Software Engineering Diploma',
   location: 'Montreal, QC, Canada',
   email: 'm.amine.kamal@outlook.com',
 };
 
-const pskills: Skill[] = [
-  { name: '', percent: 0 },
-  { name: '', percent: 0 },
-  { name: '', percent: 0 },
-  { name: '', percent: 0 },
-  { name: '', percent: 0 },
-  { name: '', percent: 0 },
-  { name: '', percent: 0 },
-  { name: '', percent: 0 },
+// Technical Skills
+const tskills: Skill[] = [
+  { name: 'TypeScript' },
+  { name: 'JavaScript' },
+  { name: 'HTML/CSS' },
+  { name: 'Python' },
+  { name: 'Java/Kotlin' },
+  { name: 'C++' },
+  { name: 'PHP' },
+  { name: 'SQL' },
+  { name: 'Ruby' },
+  { name: 'Batch/Shell' },
+  { name: 'Git' },
+  { name: 'Jira' },
+  { name: 'Angular/Vue' },
+  { name: 'Selenium' },
+  { name: 'AWS' },
+  { name: 'Docker' },
 ];
 
-// Softwares & tools Skills
-const tskills: Skill[] = [
-  { name: '', percent: 0 },
-  { name: '', percent: 0 },
-  { name: '', percent: 0 },
-  { name: '', percent: 0 },
-  { name: '', percent: 0 },
-  { name: '', percent: 0 },
-  { name: '', percent: 0 },
-  { name: '', percent: 0 },
+// Interpersonal Skills
+const iskills: Skill[] = [
+  { name: 'TypeScript' },
+  { name: 'JavaScript' },
+  { name: 'HTML/CSS' },
+  { name: 'Python' },
+  { name: 'Java/Kotlin' },
+  { name: 'C++' },
+  { name: 'PHP' },
+  { name: 'SQL' },
+  { name: 'Ruby' },
+  { name: 'Batch/Shell' },
+  { name: 'Git' },
+  { name: 'Jira' },
+  { name: 'Angular/Vue' },
+  { name: 'Selenium' },
+  { name: 'AWS' },
+  { name: 'Docker' },
 ];
 
 const skills: Skills = {
-  pskills,
   tskills,
-  programing: 'Programing Languages',
-  tools: 'Software & Tools',
+  iskills,
+  technical: 'Technical skills',
+  interpersonal: 'Interpersonal skills',
 };
 
 const work: WorkExperience[] = [

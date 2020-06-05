@@ -1,0 +1,9 @@
+.dark a {
+  color: #211f1f;
+}
+
+.dark .active a,
+.dark .active a:hover {
+  background-color: #211f1f;
+  color: whitesmoke;
+}
