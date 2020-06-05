@@ -1,0 +1,32 @@
+<div class="stats wthree-sub" id="skills">
+    <div class="container">
+        <h3 class="w3l-title" style="color: #E3E2DE;">{{ config.nav.skills }}</h3>
+        <div class="col-sm-6 stats_grid_right">
+            <h4 class="w3l-title" style="color: #E3E2DE;">
+                {{ config.skills.technical }}
+            </h4>
+
+            <ng-container *ngFor="let skill of config.skills.tskills; let i = index">
+                <div class="skillbar" data-percent="100">
+
+                    <span class="skillbar-title" [style]="tcolor(i)">{{ skill.name }}</span>
+                    <p class="skillbar-bar" [style]="bcolor(i)"></p>
+                    <!-- <span class="skill-bar-percent"></span> -->
+                </div>
+            </ng-container>
+        </div>
+
+        <div class="col-sm-6 stats_grid_right">
+            <h4 class="w3l-title" style="color: #E3E2DE;">{{ config.skills.interpersonal }}</h4>
+
+            <ng-container *ngFor="let skill of config.skills.iskills; let i = index">
+                <div class="skillbar" data-percent="100">
+
+                    <span class="skillbar-title" [style]="tcolor(i)">{{ skill.name }}</span>
+                    <p class="skillbar-bar" [style]="bcolor(i)"></p>
+                </div>
+            </ng-container>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</div>
