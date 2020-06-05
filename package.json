@@ -8,7 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "deploy": "ng build --prod --base-href \"resume\" && ngh"
+    "deploy": "ng build --prod --base-href \"resume\" && ngh --repo=https://github.com/AmineKamal/resume.git --name=\"Amine Kamal\" --email=m.amine.kamal@gmail.com"
   },
   "private": true,
   "dependencies": {
