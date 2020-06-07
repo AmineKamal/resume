@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ConfigModel } from 'src/app/config/config.model';
 import { Config } from 'src/app/config/config';
+import { isMobile } from 'src/app/utils/device.utils';
 
 @Component({
   selector: 'app-education',
@@ -14,5 +15,15 @@ export class EducationComponent implements OnInit {
 
   ngOnInit(): void {
     Config.get().subscribe((c) => (this.config = c));
+  }
+
+  playDemo(demo?: string) {
+    if (!demo) {
+      return alert(this.config.alerts.demo);
+    }
+  }
+
+  isMobile() {
+    return isMobile();
   }
 }

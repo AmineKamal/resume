@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ConfigModel } from 'src/app/config/config.model';
+import { ConfigModel, Skill } from 'src/app/config/config.model';
 import { Config } from 'src/app/config/config';
 
 @Component({
@@ -18,14 +18,14 @@ export class StatsComponent implements OnInit {
 
   tcolor(i: number) {
     const c =
-      (i + 1) % 3 === 0 ? '#a0d034' : (i + 1) % 2 === 0 ? '#2980b9' : '#f1703a';
+      (i + 1) % 3 === 0 ? '#259925' : (i + 1) % 2 === 0 ? '#2980b9' : '#f1703a';
 
     return `background: ${c};`;
   }
 
   bcolor(i: number) {
     const c =
-      (i + 1) % 3 === 0 ? '#b2ec2f' : (i + 1) % 2 === 0 ? '#3498db' : '#f88c5e';
+      (i + 1) % 3 === 0 ? '#32cd32' : (i + 1) % 2 === 0 ? '#3498db' : '#f88c5e';
 
     return `background: ${c};`;
   }

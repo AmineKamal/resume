@@ -1,129 +1,42 @@
 <div class="services-w3l" id="experience">
     <div class="container">
-        <h3 class="w3l-title" style="color: white;">Work Experience</h3>
+        <h3 class="w3l-title" style="color: white;">{{ config.nav.experience }}</h3>
         <div class="wthree_latest_albums_grids">
             <div class="cntl">
                 <span class="cntl-bar cntl-center">
                     <span class="cntl-bar-fill"></span>
                 </span>
                 <div class="cntl-states">
-                    <div class="cntl-state">
+                    <div *ngFor="let work of config.work; let i = index" class="cntl-state">
                         <div class="cntl-content">
-                            <h4>2020 - Present</h4>
-                            <p>FULL TIME STUDENT</p>
-                            <h5>Graduating in May 2020</h5>
-                            <br />
-                            <h6>*Immediately available for part time work</h6>
-                            <br />
-                        </div>
-                        <div class="cntl-image">
-                            <img src="images/poly.jfif" alt=" " class="img-responsive" />
-                        </div>
-                        <div class="cntl-icon cntl-center">01</div>
-                    </div>
-                    <div class="cntl-state">
-                        <div class="cntl-content">
-                            <h4>Summer 2019</h4>
-                            <p>SOFTWARE DEVELOPER - INTERN</p>
-                            <a href="https://www.prevu3d.com/" target="_blank">
-                                <h5>PreVu3D</h5>
+                            <h4>{{ work.date }}</h4>
+                            <p>{{ work.title }}</p>
+                            <a [href]="work.companyLink" target="_blank">
+                                <h5>{{ work.company }}</h5>
                             </a>
                             <br />
                             <ul style="list-style-type: none;">
-                                <li>
-                                    <span class="glyphicon glyphicon-arrow-right"
-                                        style="margin-right: 0.5em;"></span>Full Stack
-                                    Developement (MongoDB, Python, Javascript,
-                                    Typescript)
-                                </li>
-                                <li>
-                                    <span class="glyphicon glyphicon-arrow-right"
-                                        style="margin-right: 0.5em;"></span>Backend Developement
-                                    using Chalice (Serverless, Python)
-                                </li>
-                                <li>
-                                    <span class="glyphicon glyphicon-arrow-right"
-                                        style="margin-right: 0.5em;"></span>Frontend
-                                    Developement using Vue.js, Angular (JS/TS)
-                                </li>
-                                <li>
-                                    <span class="glyphicon glyphicon-arrow-right"
-                                        style="margin-right: 0.5em;"></span>Devops (AWS, Docker)
+                                <li *ngFor="let task of work.tasks">
+                                    <div style="display: flex;">
+                                        <i class="glyphicon glyphicon-arrow-right" style="margin-right: 0.5em;"></i>
+                                        <div>
+                                            <span style="text-align: justify;">{{ task.task }} </span>
+                                            <br />
+                                            <span *ngFor="let tag of task.tags" class="badge"
+                                                style="margin-right: 1px;">
+                                                {{tag}}
+                                            </span>
+                                        </div>
+                                    </div>
                                 </li>
                             </ul>
                         </div>
                         <div class="cntl-image w3_cntl_image">
-                            <img src="images/job_prevu.png" alt=" " class="img-responsive" />
+                            <img [src]="work.image" alt=" " class="img-responsive" />
                         </div>
-                        <div class="cntl-icon cntl-center">02</div>
+                        <div class="cntl-icon cntl-center">{{ "0" + (i + 1).toString() }}</div>
                     </div>
-                    <div class="cntl-state">
-                        <div class="cntl-content">
-                            <h4>Summer 2018</h4>
-                            <p>SOFTWARE DEVELOPER - INTERN</p>
-                            <a href="https://www.ultra-forensictechnology.com/en/" target="_blank">
-                                <h5>Ultra Electronics Forensic Technology Inc</h5>
-                            </a>
-                            <br />
-                            <ul style="list-style-type: none;">
-                                <li>
-                                    <span class="glyphicon glyphicon-arrow-right"
-                                        style="margin-right: 0.5em;"></span>Design and
-                                    implementation of an infrastructure allowing
-                                    automatic testing of computer vision algorithms (C++,
-                                    Python, OpenCV)
-                                </li>
-                                <li>
-                                    <span class="glyphicon glyphicon-arrow-right"
-                                        style="margin-right: 0.5em;"></span>Web Application
-                                    developement (Java EE)
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="cntl-image">
-                            <img src="images/job_ultra.jpg" alt=" " class="img-responsive" />
-                        </div>
-                        <div class="cntl-icon cntl-center">03</div>
-                    </div>
-                    <div class="cntl-state">
-                        <div class="cntl-content">
-                            <h4>Summer 2017</h4>
-                            <p>SOFTWARE TESTER - INTERN</p>
-                            <a href="https://www.xmedius.com/en/" target="_blank">
-                                <h5>XMedius</h5>
-                            </a>
-                            <br />
-                            <ul style="list-style-type: none;">
-                                <li>
-                                    <span class="glyphicon glyphicon-arrow-right"
-                                        style="margin-right: 0.5em;"></span>Implementation of
-                                    automated ruby ​​tests using RSpec &
-                                    selenium
-                                </li>
-                                <li>
-                                    <span class="glyphicon glyphicon-arrow-right"
-                                        style="margin-right: 0.5em;"></span>Test-bot maintenance
-                                    (Python)
-                                </li>
-                                <li>
-                                    <span class="glyphicon glyphicon-arrow-right"
-                                        style="margin-right: 0.5em;"></span>Implementation of
-                                    routine scripts (batch files/ shell
-                                    scripts)
-                                </li>
-                                <li>
-                                    <span class="glyphicon glyphicon-arrow-right"
-                                        style="margin-right: 0.5em;"></span>Work as a team on
-                                    different projects (agile method,
-                                    SCRUM, etc.)
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="cntl-image">
-                            <img src="images/job_xmedius.jfif" alt=" " class="img-responsive" />
-                        </div>
-                        <div class="cntl-icon cntl-center">04</div>
-                    </div>
+
                 </div>
             </div>
         </div>

@@ -5,6 +5,7 @@ export interface Navigation {
   experience: string;
   eductation: string;
   projects: string;
+  interests: string;
   contact: string;
   download: string;
   github: string;
@@ -19,28 +20,46 @@ export interface About {
 
 export interface Skill {
   name: string;
+  projects?: boolean;
+  work?: boolean;
+  school?: boolean;
 }
 
 export interface Skills {
-  tskills: Skill[];
-  iskills: Skill[];
-  technical: string;
-  interpersonal: string;
+  pskills: Skill[];
+  oskills: Skill[];
+  programming: string;
+  other: string;
+  school: [string, string];
+  work: [string, string];
+  projects: [string, string];
+}
+
+export interface WorkExperienceTask {
+  task: string;
+  tags: string[];
 }
 
 export interface WorkExperience {
-  start: string;
-  end: string;
+  date: string;
   title: string;
-  subtitle: string;
-  tasks: string[];
+  company: string;
+  companyLink: string;
+  tasks: WorkExperienceTask[];
   image: string;
 }
 
 export interface Project {
+  name: string;
   code: string;
+  image: string;
+  tags: string[];
   demo?: string;
-  description: string;
+  description?: string;
+}
+
+export interface Projects {
+  list: Project[];
   tags: string[];
 }
 
@@ -49,6 +68,7 @@ export interface Education {
   end: string;
   school: string;
   title: string;
+  projectTitle: string;
   projects: Project[];
 }
 
@@ -65,6 +85,11 @@ export interface Contact {
   send: string;
   location: string;
   mail: string;
+  getInTouch: string;
+}
+
+export interface Alerts {
+  demo: string;
 }
 
 export interface ConfigModel {
@@ -74,7 +99,8 @@ export interface ConfigModel {
   skills: Skills;
   work: WorkExperience[];
   education: Education[];
-  projects: Project[];
+  projects: Projects;
   interests: Interest[];
   contact: Contact;
+  alerts: Alerts;
 }

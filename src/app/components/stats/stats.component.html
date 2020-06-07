@@ -1,31 +1,57 @@
 <div class="stats wthree-sub" id="skills">
     <div class="container">
         <h3 class="w3l-title" style="color: #E3E2DE;">{{ config.nav.skills }}</h3>
+
         <div class="col-sm-6 stats_grid_right">
             <h4 class="w3l-title" style="color: #E3E2DE;">
-                {{ config.skills.technical }}
+                {{ config.skills.programming }}
             </h4>
 
-            <ng-container *ngFor="let skill of config.skills.tskills; let i = index">
+            <ng-container *ngFor="let skill of config.skills.pskills; let i = index">
                 <div class="skillbar" data-percent="100">
-
                     <span class="skillbar-title" [style]="tcolor(i)">{{ skill.name }}</span>
-                    <p class="skillbar-bar" [style]="bcolor(i)"></p>
-                    <!-- <span class="skill-bar-percent"></span> -->
+                    <p class="skillbar-bar" [style]="bcolor(i)">
+                        <span style="position: absolute; right: 2px; height: 100%; display: flex; align-items: center;">
+                            <a href="#education" *ngIf="skill.school"
+                                class="scroll badge skill-badge">{{ config.skills.school[0] }}</a>
+                            <a href="#experience" *ngIf="skill.work"
+                                class="scroll badge skill-badge">{{ config.skills.work[0] }}</a>
+                            <a href="#projects" *ngIf="skill.projects"
+                                class="scroll badge skill-badge">{{ config.skills.projects[0] }}</a>
+                        </span>
+                    </p>
                 </div>
             </ng-container>
         </div>
 
         <div class="col-sm-6 stats_grid_right">
-            <h4 class="w3l-title" style="color: #E3E2DE;">{{ config.skills.interpersonal }}</h4>
+            <h4 class="w3l-title" style="color: #E3E2DE;">{{ config.skills.other }}</h4>
 
-            <ng-container *ngFor="let skill of config.skills.iskills; let i = index">
+            <ng-container *ngFor="let skill of config.skills.oskills; let i = index">
                 <div class="skillbar" data-percent="100">
-
                     <span class="skillbar-title" [style]="tcolor(i)">{{ skill.name }}</span>
-                    <p class="skillbar-bar" [style]="bcolor(i)"></p>
+                    <p class="skillbar-bar" [style]="bcolor(i)">
+                        <span style="position: absolute; right: 2px; height: 100%; display: flex; align-items: center;">
+                            <a href="#education" *ngIf="skill.school"
+                                class="scroll badge skill-badge">{{ config.skills.school[0] }}</a>
+                            <a href="#experience" *ngIf="skill.work"
+                                class="scroll badge skill-badge">{{ config.skills.work[0] }}</a>
+                            <a href="#projects" *ngIf="skill.projects"
+                                class="scroll badge skill-badge">{{ config.skills.projects[0] }}</a>
+                        </span>
+                    </p>
                 </div>
             </ng-container>
+
+            <br />
+
+            <h4 class="w3l-title" style="color: #E3E2DE;">
+                <a class="badge skill-badge">{{ config.skills.school[0] }}</a> = {{ config.skills.school[1] }}
+                <br />
+                <a class="badge skill-badge">{{ config.skills.work[0] }}</a> = {{ config.skills.work[1] }}
+                <br />
+                <a class="badge skill-badge">{{ config.skills.projects[0] }}</a> = {{ config.skills.projects[1] }}
+            </h4>
         </div>
         <div class="clearfix"></div>
     </div>

@@ -1,36 +1,37 @@
 <div class="address" id="contact">
     <div class="container">
-        <h3 class="w3l-title" style="color: white;">Contact Me</h3>
+        <h3 class="w3l-title" style="color: white;">{{ config.nav.contact }}</h3>
         <div class="address-row">
             <div class="col-md-6 address-left wow agile fadeInLeft animated" data-wow-delay=".5s">
                 <div class="address-grid">
                     <h4 class="wow fadeIndown animated" data-wow-delay=".5s" style="color: #211f1f;">
-                        Get In Touch
+                        {{ config.contact.getInTouch }}
                     </h4>
                     <form action="http://64.225.28.181:8080/" method="post" target="hiddenFrame">
                         <input hidden name="to" value="m.amine.kamal@outlook.com" />
                         <input hidden name="from" value="website.cv" />
                         <input hidden name="subject" value="Contact Me Form" />
-                        <input type="text" placeholder="Name" name="name" required="" />
-                        <input type="email" placeholder="Email" name="email" required="" />
-                        <input type="text" placeholder="Subject" name="subject" required="" />
-                        <textarea placeholder="Message" required=""></textarea>
-                        <input type="submit" value="SEND" />
+                        <input type="text" [placeholder]="config.contact.name" name="name" required="" />
+                        <input type="email" [placeholder]="config.contact.email" name="email" required="" />
+                        <input type="text" [placeholder]="config.contact.subject" name="subject" required="" />
+                        <textarea [placeholder]="config.contact.message" required=""></textarea>
+                        <input type="submit" [value]="config.contact.send" />
                     </form>
                 </div>
             </div>
             <div class="col-md-6 address-right">
                 <div class="address-info wow fadeInRight animated" data-wow-delay=".5s">
-                    <h4 style="color: #211f1f;">Location</h4>
-                    <p>Montreal, QC, Canada</p>
+                    <h4 style="color: #211f1f;">{{ config.contact.location }}</h4>
+                    <p>{{ config.aboutContent.location }}</p>
                 </div>
                 <br />
                 <br />
                 <div class="address-info agileits-info wow fadeInRight animated" data-wow-delay=".6s">
-                    <h4 style="color: #211f1f;">Mail</h4>
+                    <h4 style="color: #211f1f;">{{ config.contact.mail }}</h4>
                     <p>
                         <a href="mailto:m.amine.kamal@outlook.com">
-                            m.amine.kamal@outlook.com</a>
+                            m.amine.kamal@outlook.com
+                        </a>
                     </p>
                 </div>
             </div>
