@@ -34,7 +34,7 @@ const aboutForm: About = {
 
 const aboutContent: About = {
   name: 'Amine Kamal',
-  expertise: 'Software Engineering Diploma',
+  expertise: 'Software Engineering',
   location: 'Montreal, QC, Canada',
   email: 'm.amine.kamal@outlook.com',
 };
