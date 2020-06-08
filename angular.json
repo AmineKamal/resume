@@ -24,7 +24,8 @@
               "src/assets",
               "src/images",
               "src/fonts",
-              "src/cv.pdf"
+              "src/cv_fr.pdf",
+              "src/cv_en.pdf"
             ],
             "styles": ["src/styles.css"],
             "scripts": []

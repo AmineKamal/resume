@@ -19,4 +19,8 @@ export class HeaderComponent implements OnInit {
   toggleLang() {
     Config.toggle();
   }
+
+  get cv() {
+    return 'cv_' + Config.current() + '.pdf';
+  }
 }

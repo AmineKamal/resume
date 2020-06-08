@@ -2,6 +2,7 @@ import { StrictMap, Observable } from 'simple-structures';
 import { ConfigModel } from './config.model';
 import en from './en';
 import fr from './fr';
+import { environment } from 'src/environments/environment';
 
 export const LANGUAGES = ['en', 'fr'] as const;
 export type Language = typeof LANGUAGES[number];
@@ -34,11 +35,19 @@ export class Config {
   }
 
   static use(lang: Language) {
-    const url = window.location.origin + '/?lang=' + lang;
+    const url =
+      window.location.origin +
+      (environment.production ? '/resume' : '') +
+      '/?lang=' +
+      lang;
     window.location.replace(url);
   }
 
   static toggle() {
     this.instance.current === 'en' ? this.use('fr') : this.use('en');
+  }
+
+  static current() {
+    return this.instance.current;
   }
 }
