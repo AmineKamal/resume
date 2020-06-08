@@ -13,29 +13,30 @@ import {
 } from './config.model';
 
 const nav: Navigation = {
-  home: 'Home',
-  about: 'About Me',
-  skills: 'Skills',
-  experience: 'Experience',
-  eductation: 'Education',
-  projects: 'Projects',
-  interests: 'Interests',
+  home: 'Accueil',
+  about: 'À propos',
+  skills: 'Compétences',
+  experience: 'Expérience',
+  eductation: 'Éducation',
+  projects: 'Projets',
+  interests: 'Intérêts',
   contact: 'Contact',
-  download: 'Download',
+  lang: 'EN',
+  download: 'Télécharger',
   github: 'Github',
 };
 
 const aboutForm: About = {
-  name: 'Name',
-  expertise: 'Expertise',
+  name: 'Nom',
+  expertise: 'Spécialisation',
   location: 'Location',
-  email: 'Email',
+  email: 'Courriel',
 };
 
 const aboutContent: About = {
   name: 'Amine Kamal',
-  expertise: 'Software Engineering Diploma',
-  location: 'Montreal, QC, Canada',
+  expertise: 'Génie Logiciel',
+  location: 'Montréal, QC, Canada',
   email: 'm.amine.kamal@outlook.com',
 };
 
@@ -47,6 +48,7 @@ const pskills: Skill[] = [
   { name: 'Python', school: true, work: true, projects: true },
   { name: 'Java/Kotlin', school: true, work: true },
   { name: 'C++', school: true, work: true },
+  { name: 'C#', school: true },
   { name: 'PHP', projects: true },
   { name: 'SQL', school: true, work: true },
   { name: 'Ruby', work: true },
@@ -66,30 +68,30 @@ const oskills: Skill[] = [
 const skills: Skills = {
   pskills,
   oskills,
-  programming: 'Programming languages',
-  other: 'Other skills',
-  school: ['S', 'School'],
-  work: ['W', 'Work'],
-  projects: ['P', 'Projects'],
+  programming: 'Langages de programmation',
+  other: 'Autres compétences',
+  school: ['E', 'École'],
+  work: ['T', 'Travail'],
+  projects: ['P', 'Projets'],
 };
 
 const work: WorkExperience[] = [
   {
-    date: 'Summer 2019',
-    title: 'SOFTWARE DEVELOPER - INTERN',
+    date: 'Été 2019',
+    title: 'DÉVELOPPEUR LOGICIEL - STAGE',
     company: 'PreVu3D',
     companyLink: 'https://www.prevu3d.com/',
     tasks: [
       {
-        task: 'Full Stack Developement',
+        task: 'Dévelopement de technologies web',
         tags: ['MongoDB', 'Python', 'Javascript', 'Typescript'],
       },
       {
-        task: 'Backend Developement',
+        task: 'Dévelopement Dorsale',
         tags: ['Chalice', 'Serverless', 'Python'],
       },
       {
-        task: 'Frontend Developement',
+        task: 'Dévelopement Frontale',
         tags: ['Vue', 'Angular'],
       },
       {
@@ -100,44 +102,43 @@ const work: WorkExperience[] = [
     image: 'images/job_prevu.png',
   },
   {
-    date: 'Summer 2018',
-    title: 'SOFTWARE DEVELOPER - INTERN',
+    date: 'Été 2018',
+    title: 'DÉVELOPPEUR LOGICIEL - STAGE',
     company: 'Ultra Electronics Forensic Technology Inc',
     companyLink: 'https://www.ultra-forensictechnology.com/en/',
     tasks: [
       {
-        task:
-          'Design and implementation of an infrastructure allowing automatic testing of computer vision algorithms',
+        task: `Conception et implémentation d'une infrastructure permettant de tester automatiquement des algorithmes de vision par ordinateur.`,
         tags: ['C++', 'Python', 'OpenCV'],
       },
       {
-        task: 'Web Application developement',
-        tags: ['Java EE', 'SQL', 'HTML', 'CSS', 'JS'],
+        task: `Développement d'une application web.`,
+        tags: ['Java EE', 'PostgreSQL', 'HTML', 'CSS', 'JS'],
       },
     ],
     image: 'images/job_ultra.jpg',
   },
   {
-    date: 'Summer 2017',
-    title: 'SOFTWARE TESTER - INTERN',
+    date: 'Été 2017',
+    title: 'TESTEUR LOGICIEL - STAGE',
     company: 'XMedius',
     companyLink: 'https://www.xmedius.com/en/',
     tasks: [
       {
-        task: 'Implementation of automated ruby ​​tests',
+        task: 'Implémentation de tests ruby automatisés.',
         tags: ['Ruby', 'RSpec', 'Selenium', 'Ruby On Rails'],
       },
       {
-        task: 'Test-bot maintenance',
+        task: 'Maintenance du test-bot.',
         tags: ['Python'],
       },
       {
-        task: 'Implementation of routine scripts',
+        task: 'Implémentation de scripts de routine.',
         tags: ['Batch', 'Shell'],
       },
       {
-        task: 'Work as a team on different projects',
-        tags: ['Agile Methods', 'SCRUM'],
+        task: 'Travailler en équipe sur différents projets.',
+        tags: ['Méthodes agiles', 'SCRUM'],
       },
     ],
     image: 'images/job_xmedius.jfif',
@@ -148,17 +149,16 @@ const education: Education[] = [
   {
     start: '2016',
     end: '2020',
-    school: 'Polytechnic Montreal',
-    title: 'Software Engineering',
-    projectTitle: 'School Projects',
+    school: 'Polytechnique Montreal',
+    title: 'Génie Logiciel',
+    projectTitle: 'Projets Scolaires',
     projects: [
       {
         name: 'INF1900',
         code: 'https://bitbucket.org/Amine9393/inf1900',
         image: '',
         tags: ['C++'],
-        description:
-          'Line following robot which, using a sensor, can analyze the walls of a tunnel it crosses.',
+        description: `Robot suiveur de ligne qui, avec un senseur, analyse les murs d'un tunnel qu'il traverse.`,
       },
       {
         name: 'LOG2990',
@@ -173,7 +173,7 @@ const education: Education[] = [
           'ThreeJs',
           'Socket',
         ],
-        description: '2D / 3D Multiplayer Game - Web application',
+        description: 'Jeu Multijoueur 2D / 3D  - Application Web',
       },
       {
         name: 'LOG3900',
@@ -190,8 +190,7 @@ const education: Education[] = [
           'Express',
           'Socket',
         ],
-        description:
-          '2D Multiplayer Drawing Game - Desktop and Android Application',
+        description: 'Jeu de Dessin Multijoueur 2D - PC et application android',
       },
       {
         name: 'LOG8970',
@@ -206,24 +205,23 @@ const education: Education[] = [
           'MongoDB',
           'WPA',
         ],
-        description:
-          'Tinder-Like Web Application to create Student Groups based on student matches.',
+        description: `Application du style Tinder permettant de créer des groupes d'étudiants basée sur les matches des étudiants.`,
       },
     ],
   },
   {
     start: '2014',
     end: '2015',
-    school: 'University Of Ottawa',
-    title: 'Electrical Engineering',
+    school: `Université D'Ottawa`,
+    title: 'Génie Électrique',
     projectTitle: '',
     projects: [],
   },
   {
     start: '2011',
     end: '2013',
-    school: 'Montmorency College',
-    title: 'Health Sciences',
+    school: 'Collège Montmorency',
+    title: 'Sciences De La Nature',
     projectTitle: '',
     projects: [],
   },
@@ -233,49 +231,49 @@ const list: Project[] = [
   {
     name: 'Html Scraper',
     code: 'https://github.com/AmineKamal/simple-html-scraper',
-    image: 'https://via.placeholder.com/640x426.png/00000/00000',
+    image: 'images/project-scraper.jpg',
     tags: ['Typescript', 'Npm Package'],
   },
   {
     name: 'Mailer',
     code: 'https://github.com/AmineKamal/mailer',
-    image: 'https://via.placeholder.com/640x426.png/00000/00000',
+    image: 'images/project-mailer.jpg',
     tags: ['Typescript', 'Server'],
   },
   {
     name: 'Webscript',
     code: 'https://github.com/AmineKamal/webscript',
-    image: 'https://via.placeholder.com/640x426.png/00000/00000',
+    image: 'images/project-webscript.jpg',
     tags: ['Typescript', 'Npm Package', 'Compiler'],
   },
   {
     name: 'Script Launcher',
     code: 'https://github.com/AmineKamal/remote-script-launcher',
-    image: 'https://via.placeholder.com/640x426.png/00000/00000',
+    image: 'images/project-script-launcher.jpg',
     tags: ['Typescript', 'Web App', 'Angular', 'Server'],
   },
   {
     name: 'Polyteam Profile',
     code: 'https://github.com/AmineKamal/polyteamprofile',
-    image: 'https://via.placeholder.com/640x426.png/00000/00000',
+    image: 'images/project-moodle-user.jpg',
     tags: ['PHP', 'Moodle Plugin'],
   },
   {
     name: 'Simple Structures',
     code: 'https://github.com/AmineKamal/simple-structures',
-    image: 'https://via.placeholder.com/640x426.png/00000/00000',
+    image: 'images/project-structures.jpg',
     tags: ['Typescript', 'Npm Package'],
   },
   {
     name: 'Unamed 2D Game',
     code: 'https://github.com/AmineKamal/2d-rpg',
-    image: 'https://via.placeholder.com/640x426.png/00000/00000',
+    image: 'images/project-game.jpg',
     tags: ['Typescript', 'Server', 'Angular', 'Game', 'Web App'],
   },
   {
     name: 'Resume',
     code: 'https://github.com/AmineKamal/resume',
-    image: 'https://via.placeholder.com/640x426.png/00000/00000',
+    image: 'images/project-resume.jpg',
     tags: ['Typescript', 'Server', 'Angular', 'Web App'],
   },
 ];
@@ -283,7 +281,7 @@ const list: Project[] = [
 const tags: string[] = [
   'All',
   'Typescript',
-  'Python',
+  // 'Python',
   'PHP',
   'Angular',
   'Server',
@@ -299,15 +297,15 @@ const projects = { list, tags };
 const interests: Interest[] = [
   {
     icon: 'fa fa-paw',
-    name: 'ANIMALS',
+    name: 'ANIMAUX',
   },
   {
     icon: 'fa fa-plane',
-    name: 'TRAVELLING',
+    name: 'VOYAGER',
   },
   {
     icon: 'fa fa-book',
-    name: 'READING',
+    name: 'LIRE',
   },
   {
     icon: 'fa fa-futbol-o',
@@ -315,23 +313,23 @@ const interests: Interest[] = [
   },
   {
     icon: 'fa fa-music',
-    name: 'MUSIC',
+    name: 'MUSIQUE',
   },
 ];
 
 const contact: Contact = {
-  name: 'Name',
+  name: 'Nom',
   email: 'Email',
-  subject: 'Subject',
+  subject: 'Sujet',
   message: 'Message',
-  send: 'SEND',
+  send: 'ENVOYER',
   location: 'Location',
-  mail: 'Mail',
-  getInTouch: 'Get In Touch',
+  mail: 'Courriel',
+  getInTouch: 'Entrer en contact',
 };
 
 const alerts: Alerts = {
-  demo: 'Demo Coming Soon',
+  demo: 'Démo À Venir',
 };
 
 const config: ConfigModel = {

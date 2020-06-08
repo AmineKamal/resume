@@ -7,6 +7,7 @@ export interface Navigation {
   projects: string;
   interests: string;
   contact: string;
+  lang: string;
   download: string;
   github: string;
 }

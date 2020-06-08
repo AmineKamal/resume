@@ -13,20 +13,32 @@ export const CONFIG: StrictMap<Language, ConfigModel> = {
 
 export class Config {
   private static instance: Config;
-  private observable: Observable<ConfigModel> = new Observable(CONFIG.en);
+  private current: Language;
+  private observable: Observable<ConfigModel>;
 
   public static get() {
     if (this.instance) {
       return this.instance.observable;
     }
 
-    this.instance = new Config();
+    const search = window.location.search;
+    const lang = search.includes('lang=fr') ? 'fr' : 'en';
+
+    this.instance = new Config(lang);
     return this.instance.observable;
   }
 
-  private constructor() {}
+  private constructor(lang: Language) {
+    this.observable = new Observable(CONFIG[lang]);
+    this.current = lang;
+  }
 
   static use(lang: Language) {
-    this.get().replace(CONFIG[lang]);
+    const url = window.location.origin + '/?lang=' + lang;
+    window.location.replace(url);
+  }
+
+  static toggle() {
+    this.instance.current === 'en' ? this.use('fr') : this.use('en');
   }
 }
