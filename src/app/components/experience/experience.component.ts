@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Config } from 'src/app/config/config';
 import { ConfigModel } from 'src/app/config/config.model';
+import { isMobile } from 'src/app/utils/device.utils';
 
 @Component({
   selector: 'app-experience',
@@ -14,5 +15,9 @@ export class ExperienceComponent implements OnInit {
 
   ngOnInit(): void {
     Config.get().subscribe((c) => (this.config = c));
+  }
+
+  isMobile() {
+    return isMobile();
   }
 }

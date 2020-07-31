@@ -7,7 +7,8 @@
                     <span class="cntl-bar-fill"></span>
                 </span>
                 <div class="cntl-states">
-                    <div *ngFor="let work of config.work; let i = index" class="cntl-state">
+                    <div *ngFor="let work of config.work; let i = index" class="cntl-state"
+                        [class.cntl-animate]="isMobile()">
                         <div class="cntl-content">
                             <h4>{{ work.date }}</h4>
                             <p>{{ work.title }}</p>
