@@ -47,6 +47,7 @@ export class ProjectsComponent implements OnInit {
     if (!demo) {
       return alert(this.config.alerts.demo);
     }
+    window.open(demo, '_blank').focus();
   }
 
   private filterAll() {

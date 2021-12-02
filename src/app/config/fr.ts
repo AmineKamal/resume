@@ -44,15 +44,11 @@ const aboutContent: About = {
 const pskills: Skill[] = [
   { name: 'TypeScript', school: true, work: true, projects: true },
   { name: 'JavaScript', school: true, work: true, projects: true },
-  { name: 'HTML/CSS', school: true, work: true, projects: true },
   { name: 'Python', school: true, work: true, projects: true },
   { name: 'Java/Kotlin', school: true, work: true },
   { name: 'C++', school: true, work: true },
   { name: 'C#', school: true },
-  { name: 'PHP', projects: true },
   { name: 'SQL', school: true, work: true },
-  { name: 'Ruby', work: true },
-  { name: 'Batch/Shell', school: true, work: true },
 ];
 
 // Other Skills
@@ -76,6 +72,23 @@ const skills: Skills = {
 };
 
 const work: WorkExperience[] = [
+  {
+    date: 'Septembre 2020 - Présent',
+    title: 'DÉVELOPPEUR LOGICIEL',
+    company: 'SG Digital',
+    companyLink: 'https://www.sgdigital.com/',
+    tasks: [
+      {
+        task: 'Dévelopement Frontal',
+        tags: ['Typescript'],
+      },
+      {
+        task: 'Dévelopement Dorsale',
+        tags: ['Java'],
+      }
+    ],
+    image: 'images/job_sg.png',
+  },
   {
     date: 'Été 2019',
     title: 'DÉVELOPPEUR LOGICIEL - STAGE',
@@ -232,43 +245,8 @@ const list: Project[] = [
     name: 'Html Scraper',
     code: 'https://github.com/AmineKamal/simple-html-scraper',
     image: 'images/project-scraper.jpg',
+    demo: 'https://www.npmjs.com/package/simple-html-scraper',
     tags: ['Typescript', 'Npm Package'],
-  },
-  {
-    name: 'Mailer',
-    code: 'https://github.com/AmineKamal/mailer',
-    image: 'images/project-mailer.jpg',
-    tags: ['Typescript', 'Server'],
-  },
-  {
-    name: 'Webscript',
-    code: 'https://github.com/AmineKamal/webscript',
-    image: 'images/project-webscript.jpg',
-    tags: ['Typescript', 'Npm Package', 'Compiler'],
-  },
-  {
-    name: 'Script Launcher',
-    code: 'https://github.com/AmineKamal/remote-script-launcher',
-    image: 'images/project-script-launcher.jpg',
-    tags: ['Typescript', 'Web App', 'Angular', 'Server'],
-  },
-  {
-    name: 'Polyteam Profile',
-    code: 'https://github.com/AmineKamal/polyteamprofile',
-    image: 'images/project-moodle-user.jpg',
-    tags: ['PHP', 'Moodle Plugin'],
-  },
-  {
-    name: 'Simple Structures',
-    code: 'https://github.com/AmineKamal/simple-structures',
-    image: 'images/project-structures.jpg',
-    tags: ['Typescript', 'Npm Package'],
-  },
-  {
-    name: 'Unamed 2D Game',
-    code: 'https://github.com/AmineKamal/2d-rpg',
-    image: 'images/project-game.jpg',
-    tags: ['Typescript', 'Server', 'Angular', 'Game', 'Web App'],
   },
   {
     name: 'Resume',
@@ -276,20 +254,27 @@ const list: Project[] = [
     image: 'images/project-resume.jpg',
     tags: ['Typescript', 'Server', 'Angular', 'Web App'],
   },
+  {
+    name: 'Workout Timer',
+    code: 'https://github.com/AmineKamal/workout-timer',
+    image: 'images/workout.jpg',
+    demo: 'https://aminekamal.github.io/workout-timer/',
+    tags: []
+  }
 ];
 
 const tags: string[] = [
-  'All',
-  'Typescript',
-  // 'Python',
-  'PHP',
-  'Angular',
-  'Server',
-  'Game',
-  'Web App',
-  'Npm Package',
-  'Compiler',
-  'Moodle Plugin',
+  // 'All',
+  // 'Typescript',
+  // // 'Python',
+  // 'PHP',
+  // 'Angular',
+  // 'Server',
+  // 'Game',
+  // 'Web App',
+  // 'Npm Package',
+  // 'Compiler',
+  // 'Moodle Plugin',
 ];
 
 const projects = { list, tags };
@@ -329,7 +314,7 @@ const contact: Contact = {
 };
 
 const alerts: Alerts = {
-  demo: 'Démo À Venir',
+  demo: 'Démo Non Disponible',
 };
 
 const config: ConfigModel = {
